@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+footer {
+    margin-top: 20px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
