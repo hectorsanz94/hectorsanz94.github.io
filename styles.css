@@ -1,21 +1,272 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
 }
 
-header, footer {
-    background-color: #f8f9fa;
-    padding: 10px 0;
+h1 {
+    margin-bottom: 1em;
+    color: #000000;
+    text-align: center;
+}
+
+h2 {
+    color: #343a40;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.navbar {
+    margin-bottom: 2em;
+    background-color: #f4f4f4 !important;
+    /* Fondo Blanco para la barra de navegación */
+}
+
+.nav-link {
+    font-size: 1.1em;
+    color: #000000 !important;
+    /* Color blanco para los enlaces de la navegación */
+}
+
+.nav-link:hover {
+    color: #ffee2b !important;
+    /* Color gris claro al pasar el mouse sobre los enlaces */
+}
+
+.navbar-brand img {
+    filter: brightness(0) invert(1);
+    /* Invertir los colores del logo para que se vea mejor sobre fondo negro */
+}
+
+#about p,
+#gallery p,
+#classes p,
+#imagenesentrenamiento p,
+#news p,
+#contact p {
+    text-align: justify;
+}
+
+#carouselExampleIndicators .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+#classes .table {
+    margin-top: 1em;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
 }
 
 footer {
-    margin-top: 20px;
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1em 0;
 }
 
-.fadeIn {
-    animation-name: fadeIn;
-    animation-duration: 2s;
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
+header,
+section,
+footer {
+    animation: fadeIn 2s ease;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-inner img {
+        max-height: 300px;
+    }
+}
+
+/* Estilos para los iconos de las redes sociales en el encabezado */
+.nav-link i {
+    font-size: 24px;
+    /* Cambia el tamaño de los iconos */
+}
+
+.col-6 a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.col-6 a:hover {
+    transform: scale(1.1);
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.section-left {
+    flex: 1;
+    background-color: #ffee2b;
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.section-right {
+    flex: 1;
+    background-color: #f4f4f4;
+    color: rgb(7, 7, 7);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.section-left h1,
+.section-right h1 {
+    font-size: 2.5em;
+}
+
+.btn-custom {
+    background-color: #000;
+    color: #624fcc;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+/* IMAGEN DEL FORMULARIO*/
+.contact-container {
+    display: flex;
+    align-items: flex-start; /* Alinear los elementos al inicio del eje vertical */
+    gap: 10px; /* Espacio entre el formulario y la imagen */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    flex: 1; /* El formulario toma el espacio restante */
+}
+
+.contact-image {
+    flex: 1; /* La imagen toma el espacio restante */
+    margin-top: 150px; /* Ajusta este valor según tus necesidades */
+}
+
+.contact-image img {
+    max-width: 100%; /* La imagen no debe exceder el ancho del contenedor */
+    height: auto;
+}
+/* NOTICIAS */
+.news-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.news-section h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+}
+
+.news-card-body {
+    padding: 20px;
+}
+
+.news-card-body h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.news-card-body p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.news-card-footer {
+    padding: 15px;
+    background-color: #f7f7f7;
+    text-align: right;
+}
+
+.news-card-footer a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.news-card-footer a:hover {
+    color: #0056b3;
+}
+
