@@ -1,904 +1,818 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-
-     <!-- BOOTSTRAP 5.3 Y EL CDN -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las Cebollitas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="img/cebollitas-logo-D85210D926-seeklogo.com.png" type="image/x-icon">
-
-    <!-- CDJ DE LAS FUENTES -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    
-    <!-- NOTICIAS -->
-    <style>
-        
-.sección-noticias {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-.sección-noticias h1 {
-            margin-bottom: 30px;
-            font-size: 36px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-10px);
-        }
-       
-.tarjeta de noticias img {
-            width: 100%;
-            height: auto;
-        }
-
-        .cuerpo-de-tarjeta-de-noticias {
-            padding: 20px;
-        }
-
-      
-.cuerpo-de-tarjeta-de-noticiash5 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .cuerpo-de-tarjeta-de-noticias p {
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .pie de página de tarjeta de noticias {
-            padding: 15px;
-            background-color: #f7f7f7;
-            text-align: right;
-        }
-
-        .pie de página de tarjeta de noticias a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .pie de página de tarjeta de noticias a:hover {
-            color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Tecnico Cultura Popular</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .section-heading {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .icon {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .list-item {
+      transition: transform 0.2s;
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 0.25rem;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .list-item:hover {
+      transform: scale(1.05);
+    }
+    .list-item .details {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .logo {
+      font-size: 2rem;
+      color: #007bff;
+      animation: spin 5s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .table-container {
+      overflow: hidden;
+    }
+    .table {
+      transition: transform 0.5s ease-in-out;
+    }
+    .table-container:hover .table {
+      transform: translateY(-5px);
+    }
+    .social-media {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .social-media a {
+      margin: 0 10px;
+      font-size: 2rem;
+      transition: transform 0.3s ease-in-out;
+    }
+    .social-media a:hover {
+      transform: scale(1.2);
+    }
+    .map-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .map-embed {
+      width: 100%;
+      height: 450px;
+      border: none;
+      transition: transform 0.3s ease-in-out;
+    }
+    .map-container:hover .map-embed {
+      transform: scale(1.05);
+    }
+    .enrollment {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .enrollment .icon {
+      font-size: 3rem;
+      color: #007bff;
+    }
+    .enrollment .number {
+      font-size: 3rem;
+      color: #007bff;
+      animation: count 2s ease-in-out forwards;
+    }
+    @keyframes count {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
-
-<!-- COLOR DEL BOTON IR A INICIO DE LA PAGINA  -->
-<head>
-    <style>
-        .nav-link-black {
-            color: rgb(0, 0, 0) !important;
-        }
-    </style>
-</head>
-</head>
-<head>
-
-     <!-- TODO LO DE LA TABLA  -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horario de Clases de Fútbol</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        }
-
-        th,
-        td {
-            border: 1px solid #dddddd;
-            padding: 12px 15px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-    </style>
-
-    <title>Calendario de Juegos</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            margin-bottom: 20px;
-            /* Espacio entre cada tabla mensual */
-        }
-
-        th,
-        td {
-            border: 1px solid #dddddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        caption {
-            font-size: 1.5em;
-            margin: 10px;
-        }
-    </style>
-
-    <style>
-        .contact-list {
-            list-style-type: none;
-            /* Elimina los puntos de la lista */
-            padding: 0;
-        }
-
-        .contact-list li {
-            margin-bottom: 10px;
-            /* Espaciado entre contactos */
-            border: 1px solid #ccc;
-            /* Borde alrededor de cada contacto */
-            padding: 10px;
-            /* Padding dentro de cada ítem */
-        }
-    </style>
-
-
-    <style>
-        .youtube-video {
-            width: 100%;
-            max-width: 560px;
-            /* Ancho máximo del video */
-            height: 315px;
-            /* Altura fija del video */
-        }
-    </style>
-</head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <img src="img/cebollitas-logo-D85210D926-seeklogo.com.png" height="auto" width="100" class="pt-10">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-atom logo"></i> INSTITUTO  C.E.M.G TECNICO CULTURA POPULAR
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Programas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" href="#about">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#classes">Clases</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#imagenesentrenamiento">Imagenes de
-                                Entrenamiento</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#news">Noticias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+  <div class="container enrollment">
+    <h2 class="section-heading">Datos de Matrícula Año 2024</h2>
+    <i class="fas fa-user-graduate icon"></i>
+    <div class="number" id="enrollmentNumber">0</div>
+  </div>
 
-                    </ul>
-                    <!-- Agregar enlaces a redes sociales con logotipos -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.facebook.com" target="_blank">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.instagram.com" target="_blank">
-                                <i class="fa fa-instagram"></i>
-
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <section id="about" class="container mt-5">
-        <h1>Sobre Nosotros</h1>
-        <p>La Escuela de Fútbol "Las Cebollitas" es una institución dedicada a la formación y desarrollo de jóvenes
-            talentos en el mundo del fútbol. Fundada hace más de una década, esta escuela se ha distinguido por su
-            enfoque integral en la educación deportiva, donde no solo se prioriza la excelencia técnica y táctica en el
-            fútbol, sino también el crecimiento personal y los valores como el trabajo en equipo, la disciplina y el
-            respeto.
-
-            Ubicada en un entorno accesible y equipada con instalaciones de primera línea, Las Cebollitas ofrece
-            programas de entrenamiento para niños y adolescentes de diferentes edades y niveles de habilidad. Con un
-            equipo de entrenadores experimentados y apasionados, muchos de ellos exjugadores profesionales, la escuela
-            asegura una metodología de enseñanza que combina prácticas tradicionales con las últimas innovaciones en
-            técnicas de entrenamiento.
-
-            La Escuela de Fútbol "Las Cebollitas" no solo se concentra en la competencia, sino también en fomentar un
-            ambiente donde los jóvenes puedan desarrollar su amor por el deporte, mejorar su salud física y mental, y
-            construir amistades duraderas. Además, la escuela participa activamente en torneos locales e
-            internacionales, proporcionando a sus alumnos la oportunidad de medirse con sus pares y ganar experiencia en
-            diferentes niveles competitivos.
-
-            Con un enfoque holístico y una reputación de excelencia, la Escuela de Fútbol "Las Cebollitas" se mantiene
-            como un referente en la formación juvenil en el deporte, ayudando a los futuros futbolistas a alcanzar su
-            máximo potencial dentro y fuera del campo..</p>
-    </section>
-
-
-
-    </style>
-    </head>
-
-    </style>
-    </head>
-
-    <body>
-        <div class="container mt-50">
-            <div class="section-container">
-                <div class="section-right fade-in">
-                    <h1>Mision</h1>
-                    <p>Somos una empresa hondureña visionaria y con altos valores empresariales, dedicada al desarrollo
-                        y práctica del
-                        futbol, que trabaja por brindar auténticas experiencias deportivas, al ofrecer las mejores
-                        instalaciones deportivas y excelente organización para hombres y mujeres en todas las edades que
-                        viven la pasión del futbol.</p>
-                    <h1>Vision</h1>
-                    <p>Ser la empresa dedicada al desarrollo del futbol y con la mayor cobertura, contribuyendo a la
-                        construcción de una sociedad más sana y la formación de nuevas generaciones por medio del
-                        deporte.</p>
-                </div>
-            </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://via.placeholder.com/1920x500" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Centro de Educación Técnica</h5>
+          <p>Formación de calidad para tu futuro</p>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://via.placeholder.com/1920x500" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Amplia variedad de talleres</h5>
+          <p>Desde informática hasta electricidad</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://via.placeholder.com/1920x500" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Horarios flexibles</h5>
+          <p>Matutino, Vespertino y Nocturno</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
- <!-- GALLERIA DE LAS FOTOS COVERTILAS A UN TAMAÑO PEQUEÑO QUE NO PIERDA TANTA LA RESOLUCION KILBER -->
 
-        <section id="gallery" class="container mt-5">
-            <h1>Galería de Fotos y Videos</h1>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/20180611183433-escuela-futbol.webp" class="d-block w-100" alt="Fútbol">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/escuela-futbol-alejandro-brand-7b.jpg" class="d-block w-100" alt="Entrenamiento">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/escuela-de-futbol-comfenalco.jpg" class="d-block w-100" alt="Partido">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+  <div class="container mt-5">
+    <h2 class="section-heading">Misión</h2>
+    <p>Nuestra misión es proporcionar una educación técnica de alta calidad que prepare a nuestros estudiantes para carreras exitosas en una variedad de campos técnicos. Nos esforzamos por inculcar valores de responsabilidad, ética y habilidades prácticas que sean fundamentales para el desarrollo profesional y personal.</p>
+
+    <h2 class="section-heading">Visión</h2>
+    <p>Nuestra visión es ser un líder en la educación técnica, reconocido por nuestra excelencia académica y nuestro compromiso con el éxito de nuestros estudiantes. Buscamos innovar continuamente y adaptarnos a las necesidades cambiantes del mercado laboral y de la sociedad.</p>
+
+    <h2 class="section-heading">Historia</h2>
+    <p>El Centro de Educación Técnica fue fundado en 1990 con el objetivo de proporcionar educación técnica accesible y de alta calidad. A lo largo de los años, hemos expandido nuestros programas y mejorado nuestras instalaciones para adaptarnos a las necesidades de nuestros estudiantes y del mercado laboral. Hoy en día, ofrecemos una amplia variedad de programas en diferentes campos técnicos, y seguimos comprometidos con la excelencia educativa y el desarrollo integral de nuestros estudiantes.</p>
+  </div>
+
+  <div class="container mt-5">
+    <h1 class="section-heading">Niveles Educativos Ofrecidos</h1>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-heading"><i class="fas fa-sun icon"></i>Jornada Matutina</h2>
+        <p>La jornada matutina tendrá la modalidad de Ciclo Básico Técnico, con orientación en los siguientes talleres:</p>
+        <ul class="list-group">
+          <li class="list-group-item list-item">
+            <i class="fas fa-home icon"></i>Hogar
+            <div class="details">
+              <p>El taller de Hogar incluye clases de cocina, costura, y manejo del hogar. Es ideal para quienes desean aprender habilidades prácticas para la vida diaria.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Cocina</td>
+                      <td>Aprende a preparar alimentos nutritivos y deliciosos.</td>
+                    </tr>
+                    <tr>
+                      <td>Costura</td>
+                      <td>Técnicas de costura y confección de ropa.</td>
+                    </tr>
+                    <tr>
+                      <td>Manejo del Hogar</td>
+                      <td>Gestión eficiente de las tareas del hogar.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </section>
-
-
-     <!-- TABLA DE LOS HORARIOS DE ENTRENAMIENTO -->
-        <section id="classes" class="container mt-5">
-            <h1>Clases</h1>
-            <h2>Horarios y Precios de Clases de Fútbol</h2>
-            <table>
-                <tr>
-                    <th>Día</th>
-                    <th>09:00 am - 10:00 am</th>
-                    <th>10:00 am - 11:00 am </th>
-                    <th>11:00 am - 12:00 am</th>
-                    <th>04:00 pm - 06:00 pm</th>
-                    <th>06:00 pm - 8:00 pm</th>
-                    <th>Precios</th>
-                </tr>
-                <tr>
-                    <td>Lunes</td>
-                    <td>Calentamiento</td>
-                    <td>Técnica Individual</td>
-                    <td>Juegos Reducidos</td>
-                    <td>Entrenamiento Táctico</td>
-                    <td>Estiramiento</td>
-                    <td>Lps.500 por persona - Cualquier Horario </td>
-                </tr>
-                <tr>
-                    <td>Martes</td>
-                    <td>Calentamiento</td>
-                    <td>Técnica de Pase</td>
-                    <td>Control de Balón</td>
-                    <td>Partido Amistoso</td>
-                    <td>Recuperación</td>
-                    <td>Lps.500 por persona - Cualquier Horario </td>
-                </tr>
-                <tr>
-                    <td>Miércoles</td>
-                    <td>Calentamiento</td>
-                    <td>Entrenamiento Físico</td>
-                    <td>Tácticas de Juego</td>
-                    <td>Práctica de Tiros</td>
-                    <td>Estiramiento</td>
-                    <td>Lps.500 por persona - Cualquier Horario </td>
-                </tr>
-                <tr>
-                    <td>Jueves</td>
-                    <td>Calentamiento</td>
-                    <td>Técnica de Defensa</td>
-                    <td>Práctica de Ataque</td>
-                    <td>Simulación de Juego</td>
-                    <td>Recuperación</td>
-                    <td>Lps.500 por persona - Cualquier Horario </td>
-                </tr>
-                <tr>
-                    <td>Viernes</td>
-                    <td>Calentamiento</td>
-                    <td>Revisión de Estrategias</td>
-                    <td>Competencia Interna</td>
-                    <td>Feedback y Coaching</td>
-                    <td>Estiramiento y Cierre</td>
-                    <td>Lps.500 por persona - Cualquier Horario </td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="imagenesentrenamiento" class="container mt-5">
-            <h1>Galería Entrenamientos Fotos y Videos</h1>
-            <div class="row">
-                <!-- Imagen 1 -->
-                <div class="col-12 col-md-4">
-                    <img src="img/copa-usme.jpg" alt="Descripción de la imagen 1" class="gallery-image" width="400">
-                </div>
-                <!-- Imagen 2 -->
-                <div class="col-12 col-md-4">
-                    <img src="img/FUTBOL-2.jpg" alt="Descripción de la imagen 2" class="gallery-image" width="400">
-                </div>
-                <!-- Imagen 3 -->
-                <div class="col-12 col-md-4">
-                    <img src="img/Pumas2.jpg" alt="Descripción de la imagen 3" class="gallery-image"
-                        width="400"><!-- Contenido de la galería aquí -->
-                </div>
-                <!-- video 1 -->
-                <div class="col-12 col-md-4">
-                    <h1></h1>
-                    <iframe width="400" height="400" src="https://www.youtube.com/embed/KlujmNc2Np0?si=Ani2UHcEbsRIa5hb"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </div>
-
-                <!-- video 2 -->
-                <div class="col-12 col-md-4">
-                    <h1></h1>
-                    <iframe width="400" height="400" src="https://www.youtube.com/embed/hvR6j9tQtvg?si=eJO_ykwMS_Pvq_GW"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <!-- video 3 -->
-                <div class="col-12 col-md-4">
-                    <h1></h1>
-                    <iframe width="400" height="400" src="https://www.youtube.com/embed/w9V3oGCWYbs?si=sCAAMbyS6X_nhtvB"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <section id="news" class="container mt-5">
-                    <h1>Noticias</h1>
-                    <h2>Calendario de Juegos del Año</h2>
-
-                    <!-- Enero -->
-                    <table>
-                        <caption>Enero</caption>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo Local</th>
-                            <th>Equipo Visitante</th>
-                            <th>Ubicación</th>
-                        </tr>
-                        <tr>
-                            <td>05/01/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Rayo Vallecano</td>
-                            <td>Estadio Municipal</td>
-                        </tr>
-                        <tr>
-                            <td>19/01/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Atletico Junior</td>
-                            <td>Estadio Municipal</td>
-                        </tr>
-                    </table>
-
-                    <!-- Febrero -->
-                    <table>
-                        <caption>Febrero</caption>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo Local</th>
-                            <th>Equipo Visitante</th>
-                            <th>Ubicación</th>
-                        </tr>
-                        <tr>
-                            <td>02/02/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Sportivo Almirante</td>
-                            <td>Estadio Nacional</td>
-                        </tr>
-                        <tr>
-                            <td>16/02/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Real Sociedad</td>
-                            <td>Estadio Nacional</td>
-                        </tr>
-                    </table>
-
-                    <!-- Marzo -->
-                    <table>
-                        <caption>Marzo</caption>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Equipo Local</th>
-                            <th>Equipo Visitante</th>
-                            <th>Ubicación</th>
-                        </tr>
-                        <tr>
-                            <td>01/03/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Club Deportivo</td>
-                            <td>Estadio Municipal</td>
-                        </tr>
-                        <tr>
-                            <td>15/03/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Independiente</td>
-                            <td>Estadio Municipal</td>
-                        </tr>
-                        <tr>
-                            <td>29/03/2024</td>
-                            <td>Cebollitas FC</td>
-                            <td>Millonarios FC</td>
-                            <td>Estadio Municipal</td>
-
-                            <!-- Abril -->
-                            <table>
-                                <caption>Abril</caption>
-                                <tr>
-                                    <th>Fecha</th>
-                                    <th>Equipo Local</th>
-                                    <th>Equipo Visitante</th>
-                                    <th>Ubicación</th>
-                                </tr>
-                                <tr>
-                                    <td>12/04/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Club Atlético</td>
-                                    <td>Estadio Nacional</td>
-                                </tr>
-                                <tr>
-                                    <td>26/04/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Santa Fe</td>
-                                    <td>Estadio Municipal</td>
-                                </tr>
-                            </table>
-
-                            <!-- Mayo -->
-                            <table>
-                                <caption>Mayo</caption>
-                                <tr>
-                                    <th>Fecha</th>
-                                    <th>Equipo Local</th>
-                                    <th>Equipo Visitante</th>
-                                    <th>Ubicación</th>
-                                </tr>
-                                <tr>
-                                    <td>10/05/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Los Andes</td>
-                                    <td>Estadio Nacional</td>
-                                </tr>
-                                <tr>
-                                    <td>24/05/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Banfield</td>
-                                    <td>Estadio Municipal</td>
-                                </tr>
-                            </table>
-
-                            <!-- Junio -->
-                            <table>
-                                <caption>Junio</caption>
-                                <tr>
-                                    <th>Fecha</th>
-                                    <th>Equipo Local</th>
-                                    <th>Equipo Visitante</th>
-                                    <th>Ubicación</th>
-                                </tr>
-                                <tr>
-                                    <td>07/06/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>River Plate</td>
-                                    <td>Estadio Nacional</td>
-                                </tr>
-                                <tr>
-                                    <td>21/06/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Lanus</td>
-                                    <td>Estadio Municipal</td>
-                                </tr>
-                            </table>
-
-                            <!-- Julio -->
-                            <table>
-                                <caption>Julio</caption>
-                                <tr>
-                                    <th>Fecha</th>
-                                    <th>Equipo Local</th>
-                                    <th>Equipo Visitante</th>
-                                    <th>Ubicación</th>
-                                </tr>
-                                <tr>
-                                    <td>05/07/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Defensa y Justicia</td>
-                                    <td>Estadio Nacional</td>
-                                </tr>
-                                <tr>
-                                    <td>19/07/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Newell's Old Boys</td>
-                                    <td>Estadio Municipal</td>
-                                </tr>
-                            </table>
-
-                            <!-- Agosto -->
-                            <table>
-                                <caption>Agosto</caption>
-                                <tr>
-                                    <th>Fecha</th>
-                                    <th>Equipo Local</th>
-                                    <th>Equipo Visitante</th>
-                                    <th>Ubicación</th>
-                                </tr>
-                                <tr>
-                                    <td>02/08/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Gimnasia</td>
-                                    <td>Estadio Nacional</td>
-                                </tr>
-                                <tr>
-                                    <td>16/08/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Talleres</td>
-                                    <td>Estadio Municipal</td>
-                                </tr>
-                                <tr>
-                                    <td>30/08/2024</td>
-                                    <td>Cebollitas FC</td>
-                                    <td>Rosario Central</td>
-                                    <td>Estadio Nacional</td>
-                                </tr>
-                            </table>
-                        </tr>
-                    </table>
-                </section>
-
-                <body>
-                    <section class="news-section">
-                        <h1>Últimas Noticias</h1>
-
-
-                        
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="news-card">
-                                        <img src="img/COPA 1.jpg" alt="Noticia 1">
-                                        <div class="news-card-body">
-                                            <h5>La Copa 31 de Olimpia ...</h5>
-                                            <p>El sábado 07 de marzo nos visitó la copa 31 del Olimpia. Los alumnos de
-                                                la academia sabatina...</p>
-                                        </div>
-                                        <div class="news-card-footer">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#newsModal1">VER MÁS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="news-card">
-                                        <img src="img/MESA DE TORNEO.jpg" alt="Noticia 2">
-                                        <div class="news-card-body">
-                                            <h5>Torneo Relámpago Escu...</h5>
-                                            <p>El viernes 14 de febrero patrocinamos el torneo de escuelas bilingües
-                                                organizado por la academia Lo...</p>
-                                        </div>
-                                        <div class="news-card-footer">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#newsModal2">VER MÁS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="news-card">
-                                        <img src="img/ACADEMIA.jpg" alt="Noticia 3">
-                                        <div class="news-card-body">
-                                            <h5>Lanzamiento Academia ...</h5>
-                                            <p>El sábado 25 de marzo fue el lanzamiento oficial de nuestra academia para
-                                                el año 2020. Presentamos...</p>
-                                        </div>
-                                        <div class="news-card-footer">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#newsModal3">VER MÁS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- VENTANA DE NOTICIAS LA DE VER MAS CON ESE COLOR DEJALA -->
-                    <div class="modal fade" id="newsModal1" tabindex="-1" aria-labelledby="newsModalLabel1"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header" style="background-color: #ff5e5e;">
-                                    <h5 class="modal-title" id="newsModalLabel1" style="color: #fff;">La Copa 31 de
-                                        Olimpia de visita en Academia Sabatina</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        style="color: #fff;"></button>
-                                </div>
-                                <div class="modal-body">
-                                    El sábado 07 de marzo nos visitó la copa 31 del Olimpia. Los alumnos de la academia
-                                    sabatina tuvieron la oportunidad de tocarla y tomarse fotos individuales y grupales.
-                                    Las categorías fueron U-5, U-7, U-9, U-11 y U-15.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- VENTANA DE NOTICIAS LA DE VER MAS CON ESE COLOR DEJALA -->
-                    <div class="modal fade" id="newsModal2" tabindex="-1" aria-labelledby="newsModalLabel2"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header" style="background-color: #ff5e5e;">
-                                    <h5 class="modal-title" id="newsModalLabel1" style="color: #fff;">Torneo Relámpago
-                                        Escuelas Bilingues en Academia Los Pinares</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        style="color: #fff;"></button>
-                                </div>
-                                <div class="modal-body">
-                                    El viernes 14 de febrero patrocinamos el torneo de escuelas bilingües organizado por
-                                    la academia Los Pinares. Participamos con nuestro stand donde los alumnos de las
-                                    distintas escuelas jugaron futbol-tenis y futbolito de mesa. Asimismo, aprovechamos
-                                    a darles información sobre nuestros horarios de academia.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- VENTANA DE NOTICIAS LA DE VER MAS CON ESE COLOR DEJALA -->
-                    <div class="modal fade" id="newsModal3" tabindex="-1" aria-labelledby="newsModalLabel3"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header" style="background-color: #ff5e5e;">
-                                    <h5 class="modal-title" id="newsModalLabel1" style="color: #fff;">Lanzamiento
-                                        Academia 2020</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        style="color: #fff;"></button>
-                                </div>
-                                <div class="modal-body">
-                                    El sábado 25 de marzo fue el lanzamiento oficial de nuestra academia para el año
-                                    2020. Presentamos nuestro cuerpo técnico, uniformes de entrenamiento y de juego.
-                                    Asimismo, las políticas dentro y fuera del terrenod ejuego. También las políticas de
-                                    pago. Aprovechamos para evaluar a los alumnos en estatura y peso.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                   
-                    <div class="contact-container">
-                        <div class="contact-form">
-                            <h1>Formulario de Inscripcion</h1>
-                            <hr> <!-- Línea separadora -->
-                            <p><em>Llena todos los campos para pertencer a nuestra acedemia y nos contactaremos contigo</em></p>
-                            <form action="" method="GET">
-                                <label for="nombre"><strong>Nombre Completo:</strong></label>
-                                <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Tu nombre"
-                                    required><br><br>
-
-                                <label for="correo"><strong>Correo electronico:</strong></label>
-                                <input type="email" id="correo" name="correo" placeholder="Tu correo" required><br><br>
-
-                                <label for="telefono"><strong>Télefono:</strong></label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="Tu telefono"
-                                    required><br><br>
-
-                                <label for="asunto"><strong>Asunto:</strong></label>
-                                <select id="asunto" name="asunto" required>
-                                    <option value="" disabled selected>Seleccione una opción</option>
-                                    <option value="Entrevista con Dir. Academia">Entrevista con Dir. Academia</option>
-                                    <option value="Tour por la Academia">Tour por la Academia</option>
-                                    <option value="Futeca Academia">Conocer Entrenadores</option>
-                                    <option value="Alquiler de Instalaciones y Canchas">Alquiler de Instalaciones y Canchas</option>
-                                </select><br><br>
-
-                                <label for="mensaje"><strong>Tu Mensaje:</strong></label><br>
-                                <textarea id=" tu mensaje" name="tu mensaje" rows="5"
-                                    placeholder="Escribe tu mensaje aqui" required></textarea><br><br>
-                                <hr> <!-- Línea separadora -->
-                                <button type="submit">Enviar</button>
-                            </form>
-                        </div>               
-               </div>  
-                    <section id="contact" class="container mt-5">
-                        <body>
-                            <h1>Lista de Contactos</h1>
-                            <ul class="contact-list">
-                                <li>
-                                    <strong>Hector Luis Sanchez Gomez</strong><br>
-                                    Teléfono: +504 3343-3333<br>
-                                    Email: hectorsanchez.cod@gmail.com
-                                </li>
-                                <li>
-                                    <strong>Kilber Galvez</strong><br>
-                                    Teléfono: +504 9876-5678<br>
-                                    Email: galvez.kiro@gmail.com
-                                </li>
-                                <li>
-                                    <strong>Carlos Gómez</strong><br>
-                                    Teléfono: +504 9087-2345<br>
-                                    Email: entrenadorbochagomez@homail.com
-                                </li>
-                            </ul>
-                        </body>
-                    </section>
-
-                    <section class="mt-5">
-                        <div class="container">
-                            <h2 class="text-center">Nuestros Patrocinadores</h2>
-                            <div class="row text-center mt-4">
-                                <div class="col-6 col-md-2 mb-3">
-                                    <a href="https://www.lacolonia.com" target="_blank">
-                                        <img src="img/colonia.jpg" class="img-fluid" alt="Colonia">
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-2 mb-3">
-                                    <a href="https://www.gatorade.com" target="_blank">
-                                        <img src="img/gatorade.png" class="img-fluid" alt="Gatorade">
-
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-2 mb-3">
-                                    <a href="https://www.claro.com" target="_blank">
-                                        <img src="img/claro.png" class="img-fluid" alt="Claro">
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-2 mb-3">
-                                    <a href="https://www.latribuna.hn" target="_blank">
-                                        <img src="img/tribuna.jpg" class="img-fluid" alt="La Tribuna">
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-2 mb-3">
-                                    <a href="https://emsula.hn/?dt_portfolio=aguazul" target="_blank">
-                                        <img src="img/aguazul.jpg" class="img-fluid" alt="Aguazul">
-                                    </a>
-                                </div>
-                                <div class="col-6 col-md-2 mb-3">
-                                    <a href="https://zambos.com/" target="_blank">
-                                        <img src="img/zambos.png" class="img-fluid" alt="Zambos">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
-
-                    <hr> <!-- Línea separadora -->
-                    <hr> <!-- Línea separadora -->
-                    <!-- ENTRAR A REDES SOCIALES Y CONTACTAR CON NUMEROS -->
-                    <a class="nav-link nav-link-black" href="#">REGRESAR A INICIO</a>
-                    </li>
-                    </ul>
-
-                
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-tree icon"></i>Maderas
+            <div class="details">
+              <p>El taller de Maderas ofrece formación en carpintería, trabajando con diferentes tipos de madera para crear muebles y otras estructuras.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Carpintería Básica</td>
+                      <td>Fundamentos de la carpintería y uso de herramientas.</td>
+                    </tr>
+                    <tr>
+                      <td>Diseño de Muebles</td>
+                      <td>Conceptos de diseño y construcción de muebles.</td>
+                    </tr>
+                    <tr>
+                      <td>Acabados</td>
+                      <td>Técnicas de acabado y protección de la madera.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="row" style="position:relative">
-                <div class="col-sm-12 d-flex justify-content-center pt-3">
-                    <span class="" style="font-size: .90em;">
-                        <a href="https://www.facebook.com" class="fab fa-facebook"></a>
-                        <a href="https://www.instagram.com" class="fab fa-instagram"></a>
-                        <a href=" https://chat.whatsapp.com/LRdFwnx2cf9CULKCgb4nef" class="fab fa-whatsapp "></a>
-
-                    </span>
-                </div>
-                <div class="col-sm-12">
-                    <p class="text-center" style="color: rgb(5, 5, 5)">Teléfonos: 2283-0025/2202-0099</p>
-                </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-bolt icon"></i>Electricidad
+            <div class="details">
+              <p>El taller de Electricidad brinda conocimientos sobre instalación y mantenimiento de sistemas eléctricos, preparación para carreras en la industria eléctrica.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Instalaciones Eléctricas</td>
+                      <td>Principios de instalaciones eléctricas residenciales y comerciales.</td>
+                    </tr>
+                    <tr>
+                      <td>Mantenimiento Eléctrico</td>
+                      <td>Técnicas de mantenimiento preventivo y correctivo.</td>
+                    </tr>
+                    <tr>
+                      <td>Seguridad Eléctrica</td>
+                      <td>Normas y prácticas de seguridad en el trabajo eléctrico.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-microchip icon"></i>Electrónica
+            <div class="details">
+              <p>El taller de Electrónica enseña sobre componentes electrónicos y circuitos, ideal para estudiantes interesados en tecnología y reparaciones electrónicas.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Circuitos Básicos</td>
+                      <td>Fundamentos de circuitos eléctricos y electrónicos.</td>
+                    </tr>
+                    <tr>
+                      <td>Microcontroladores</td>
+                      <td>Programación y aplicación de microcontroladores.</td>
+                    </tr>
+                    <tr>
+                      <td>Reparación Electrónica</td>
+                      <td>Técnicas de diagnóstico y reparación de equipos electrónicos.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-laptop-code icon"></i>Bachillerato Técnico Profesional en Informática
+            <div class="details">
+              <p>El Bachillerato en Informática prepara a los estudiantes en programación, redes y mantenimiento de computadoras, formando profesionales en el área de TI.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Programación</td>
+                      <td>Conceptos y lenguajes de programación.</td>
+                    </tr>
+                    <tr>
+                      <td>Redes</td>
+                      <td>Diseño y administración de redes informáticas.</td>
+                    </tr>
+                    <tr>
+                      <td>Mantenimiento de Computadoras</td>
+                      <td>Técnicas de mantenimiento y reparación de hardware.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </section>
+          </li>
+        </ul>
 
-        <footer class="text-center mt-5">
-            <p>© 2024 Escuela de Fútbol las Cebollitas por Hector Sanchez y Kilber Galvez. Todos los derechos
-                reservados.</p>
+        <h2 class="section-heading"><i class="fas fa-cloud-sun icon"></i>Jornada Vespertina</h2>
+        <p>La jornada vespertina tendrá las modalidades de Ciclo Básico Técnico, con orientación en los siguientes talleres:</p>
+        <ul class="list-group">
+          <li class="list-group-item list-item">
+            <i class="fas fa-home icon"></i>Hogar
+            <div class="details">
+              <p>El taller de Hogar incluye clases de cocina, costura, y manejo del hogar. Es ideal para quienes desean aprender habilidades prácticas para la vida diaria.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Cocina</td>
+                      <td>Aprende a preparar alimentos nutritivos y deliciosos.</td>
+                    </tr>
+                    <tr>
+                      <td>Costura</td>
+                      <td>Técnicas de costura y confección de ropa.</td>
+                    </tr>
+                    <tr>
+                      <td>Manejo del Hogar</td>
+                      <td>Gestión eficiente de las tareas del hogar.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-tree icon"></i>Maderas
+            <div class="details">
+              <p>El taller de Maderas ofrece formación en carpintería, trabajando con diferentes tipos de madera para crear muebles y otras estructuras.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Carpintería Básica</td>
+                      <td>Fundamentos de la carpintería y uso de herramientas.</td>
+                    </tr>
+                    <tr>
+                      <td>Diseño de Muebles</td>
+                      <td>Conceptos de diseño y construcción de muebles.</td>
+                    </tr>
+                    <tr>
+                      <td>Acabados</td>
+                      <td>Técnicas de acabado y protección de la madera.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-bolt icon"></i>Electricidad
+            <div class="details">
+              <p>El taller de Electricidad brinda conocimientos sobre instalación y mantenimiento de sistemas eléctricos, preparación para carreras en la industria eléctrica.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Instalaciones Eléctricas</td>
+                      <td>Principios de instalaciones eléctricas residenciales y comerciales.</td>
+                    </tr>
+                    <tr>
+                      <td>Mantenimiento Eléctrico</td>
+                      <td>Técnicas de mantenimiento preventivo y correctivo.</td>
+                    </tr>
+                    <tr>
+                      <td>Seguridad Eléctrica</td>
+                      <td>Normas y prácticas de seguridad en el trabajo eléctrico.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-microchip icon"></i>Electrónica
+            <div class="details">
+              <p>El taller de Electrónica enseña sobre componentes electrónicos y circuitos, ideal para estudiantes interesados en tecnología y reparaciones electrónicas.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Circuitos Básicos</td>
+                      <td>Fundamentos de circuitos eléctricos y electrónicos.</td>
+                    </tr>
+                    <tr>
+                      <td>Microcontroladores</td>
+                      <td>Programación y aplicación de microcontroladores.</td>
+                    </tr>
+                    <tr>
+                      <td>Reparación Electrónica</td>
+                      <td>Técnicas de diagnóstico y reparación de equipos electrónicos.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-laptop-code icon"></i>Bachillerato Técnico Profesional en Informática
+            <div class="details">
+              <p>El Bachillerato en Informática prepara a los estudiantes en programación, redes y mantenimiento de computadoras, formando profesionales en el área de TI.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Programación</td>
+                      <td>Conceptos y lenguajes de programación.</td>
+                    </tr>
+                    <tr>
+                      <td>Redes</td>
+                      <td>Diseño y administración de redes informáticas.</td>
+                    </tr>
+                    <tr>
+                      <td>Mantenimiento de Computadoras</td>
+                      <td>Técnicas de mantenimiento y reparación de hardware.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-lightbulb icon"></i>Bachillerato Técnico Profesional en Electricidad
+            <div class="details">
+              <p>Este bachillerato se enfoca en el diseño, instalación y mantenimiento de sistemas eléctricos, capacitando a los estudiantes para trabajar en el sector eléctrico.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Diseño Eléctrico</td>
+                      <td>Principios de diseño de sistemas eléctricos.</td>
+                    </tr>
+                    <tr>
+                      <td>Automatización</td>
+                      <td>Conceptos de automatización y control eléctrico.</td>
+                    </tr>
+                    <tr>
+                      <td>Instalaciones Industriales</td>
+                      <td>Instalación y mantenimiento de sistemas eléctricos industriales.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-cogs icon"></i>Bachillerato Técnico Profesional en Electrónica
+            <div class="details">
+              <p>El Bachillerato en Electrónica prepara a los estudiantes en el diseño y reparación de sistemas electrónicos, ideal para aquellos interesados en tecnología avanzada.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Sistemas Digitales</td>
+                      <td>Diseño y análisis de sistemas digitales.</td>
+                    </tr>
+                    <tr>
+                      <td>Electrónica Avanzada</td>
+                      <td>Estudio de componentes y circuitos electrónicos avanzados.</td>
+                    </tr>
+                    <tr>
+                      <td>Robótica</td>
+                      <td>Principios y aplicaciones de la robótica.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
-        <script src="./js/owl.carousel.min.js"></script>
-        <script src="./js/main.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://kit.fontawesome.com/8171a85772.js" crossorigin="anonymous"></script>
-    </body>
+        <h2 class="section-heading"><i class="fas fa-moon icon"></i>Jornada Nocturna</h2>
+        <p>La jornada nocturna tendrá las modalidades de Ciclo Básico Técnico, con orientación en los siguientes talleres:</p>
+        <ul class="list-group">
+          <li class="list-group-item list-item">
+            <i class="fas fa-home icon"></i>Hogar
+            <div class="details">
+              <p>El taller de Hogar incluye clases de cocina, costura, y manejo del hogar. Es ideal para quienes desean aprender habilidades prácticas para la vida diaria.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Cocina</td>
+                      <td>Aprende a preparar alimentos nutritivos y deliciosos.</td>
+                    </tr>
+                    <tr>
+                      <td>Costura</td>
+                      <td>Técnicas de costura y confección de ropa.</td>
+                    </tr>
+                    <tr>
+                      <td>Manejo del Hogar</td>
+                      <td>Gestión eficiente de las tareas del hogar.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-tree icon"></i>Maderas
+            <div class="details">
+              <p>El taller de Maderas ofrece formación en carpintería, trabajando con diferentes tipos de madera para crear muebles y otras estructuras.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Carpintería Básica</td>
+                      <td>Fundamentos de la carpintería y uso de herramientas.</td>
+                    </tr>
+                    <tr>
+                      <td>Diseño de Muebles</td>
+                      <td>Conceptos de diseño y construcción de muebles.</td>
+                    </tr>
+                    <tr>
+                      <td>Acabados</td>
+                      <td>Técnicas de acabado y protección de la madera.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-bolt icon"></i>Electricidad
+            <div class="details">
+              <p>El taller de Electricidad brinda conocimientos sobre instalación y mantenimiento de sistemas eléctricos, preparación para carreras en la industria eléctrica.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Instalaciones Eléctricas</td>
+                      <td>Principios de instalaciones eléctricas residenciales y comerciales.</td>
+                    </tr>
+                    <tr>
+                      <td>Mantenimiento Eléctrico</td>
+                      <td>Técnicas de mantenimiento preventivo y correctivo.</td>
+                    </tr>
+                    <tr>
+                      <td>Seguridad Eléctrica</td>
+                      <td>Normas y prácticas de seguridad en el trabajo eléctrico.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-microchip icon"></i>Electrónica
+            <div class="details">
+              <p>El taller de Electrónica enseña sobre componentes electrónicos y circuitos, ideal para estudiantes interesados en tecnología y reparaciones electrónicas.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Circuitos Básicos</td>
+                      <td>Fundamentos de circuitos eléctricos y electrónicos.</td>
+                    </tr>
+                    <tr>
+                      <td>Microcontroladores</td>
+                      <td>Programación y aplicación de microcontroladores.</td>
+                    </tr>
+                    <tr>
+                      <td>Reparación Electrónica</td>
+                      <td>Técnicas de diagnóstico y reparación de equipos electrónicos.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-laptop-code icon"></i>Bachillerato Técnico Profesional en Informática
+            <div class="details">
+              <p>El Bachillerato en Informática prepara a los estudiantes en programación, redes y mantenimiento de computadoras, formando profesionales en el área de TI.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Programación</td>
+                      <td>Conceptos y lenguajes de programación.</td>
+                    </tr>
+                    <tr>
+                      <td>Redes</td>
+                      <td>Diseño y administración de redes informáticas.</td>
+                    </tr>
+                    <tr>
+                      <td>Mantenimiento de Computadoras</td>
+                      <td>Técnicas de mantenimiento y reparación de hardware.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-item">
+            <i class="fas fa-lightbulb icon"></i>Bachillerato Técnico Profesional en Electricidad
+            <div class="details">
+              <p>Este bachillerato se enfoca en el diseño, instalación y mantenimiento de sistemas eléctricos, capacitando a los estudiantes para trabajar en el sector eléctrico.</p>
+              <div class="table-container">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Asignatura</th>
+                      <th scope="col">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Diseño Eléctrico</td>
+                      <td>Principios de diseño de sistemas eléctricos.</td>
+                    </tr>
+                    <tr>
+                      <td>Automatización</td>
+                      <td>Conceptos de automatización y control eléctrico.</td>
+                    </tr>
+                    <tr>
+                      <td>Instalaciones Industriales</td>
+                      <td>Instalación y mantenimiento de sistemas eléctricos industriales.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+ 
+
+  <div class="map-container">
+    <h2 class="section-heading">Ubicación</h2>
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d488.74346639656267!2d-87.19369368215654!3d14.106323573225978!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fa2c297d4290d%3A0xd1e9a9a2e76f72a8!2sInstituto%20Cultura%20Popular!5e0!3m2!1ses-419!2shn!4v1718686634373!5m2!1ses-419!2shn" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <div class="social-media">
+    <h2 class="section-heading">Redes Sociales</h2>
+    <a href="https://wa.me/1234567890" target="_blank" class="fab fa-whatsapp"></a>
+    <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+    <a href="mailto:info@colegio.com" target="_blank" class="fas fa-envelope"></a>
+  </div>
+
+  <footer class="text-center text-lg-start">
+    <div class="text-center p-3">
+      © 2024 INSTITUTO  C.E.M.G TECNICO CULTURA POPULAR ELABORADO POR: HECTOR LUIS SANCHEZ  Y KILBER ALEXANDER GALVEZ | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio </a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    document.querySelectorAll('.list-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const details = item.querySelector('.details');
+        details.style.display = details.style.display === 'none' || details.style.display === '' ? 'block' : 'none';
+      });
+    });
+
+    // Enrollment number animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const enrollmentNumberElement = document.getElementById('enrollmentNumber');
+      const targetNumber = 400 ; // Replace with the actual enrollment number
+      let currentNumber = 0;
+
+      const incrementNumber = () => {
+        if (currentNumber < targetNumber) {
+          currentNumber += Math.floor(targetNumber / 100);
+          if (currentNumber > targetNumber) {
+            currentNumber = targetNumber;
+          }
+          enrollmentNumberElement.textContent = currentNumber.toLocaleString();
+          requestAnimationFrame(incrementNumber);
+        }
+      };
+
+      requestAnimationFrame(incrementNumber);
+    });
+  </script>
+</body>
 </html>
